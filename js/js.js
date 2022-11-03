@@ -84,16 +84,7 @@ function Progresso() {
 }
 
 
-function Anima(){
-  
-        intervalo= setInterval(Progresso, 1000);
-
-
-
-
-
-
-    }
+function Anima(){  intervalo= setInterval(Progresso, 1000); }
 
 
 function Stop(){
@@ -101,33 +92,18 @@ function Stop(){
 
 }
 function AutoPlay(){
-
     audio.play()
     Anima()
 
     document.querySelector('.player').src='./img/replay.svg'
-
-
-
 }
+
 const Play=()=>{
-    if(audio.ended==true){
-location.reload();
-    }
-
-
-    
-
-
     if(audio.paused==true ){
         document.querySelector('.player').src='./img/replay.svg'
         Anima()
-    
-            audio.play();
-            
-
-
-        }else{
+        audio.play();}
+            else{
         document.querySelector('.player').src='./img/play.svg';
 
         Stop()
@@ -161,4 +137,4 @@ const backto5sec=()=>{
 
 
 
-AutoPlay()//function altomatica
+AutoPlay()//function automática
