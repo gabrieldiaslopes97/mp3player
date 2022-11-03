@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css.css">
+
+    <script defer src="./js/js.js"></script>
+    <title>mp3</title>
+</head>
+<body>
+    <p>
+        clique no play pois o auto play é bloqueado por segurança
+    </p>
+    <div class="container">
+    
+
+        <h1>MP3 tralha</h1>
+
+        <div class="sing">
+
+        </div>
+        <div class="nome">
+        </div>
+
+        <div class="min">
+            <!-- <span class="loop"></span> -->
+            <input  class="loop" type="range" onchange="setPosition()">
+        </div>
+        <div class="volume">
+            <img src="./img/volume.svg" alt="" class="volumeicon">
+            <input type="range" class="volumerange" onchange="setVolume()">
+        </div>
+        
+        <div class="buttons">
+            <div class="play left" onclick="backto5sec()">
+                <img src="./img/Group 1.svg" alt="">
+            </div>
+            <div class="play" onclick="Play()">
+                <img class='player' src="./img/play.svg" alt="">
+            </div>   
+            <div class="play right" onclick="Goto5sec()">
+                <img src="./img/Group 1(1).svg" alt="">
+            </div>
+ 
+
+
+        </div>
+        <a onclick="Change()" id="random"></a>
+    </div>
+   
+</body>
+</html>
