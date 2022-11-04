@@ -1,4 +1,4 @@
-var db=["",
+var db=["erro",
     '50 Cent ft Nate Dogg - 21 Questions.mp3',
 '702 (Lyrics) - Get It Together(MP3_320K).mp3',
 'Bin _DIOR_ (ÁUDIO PRÉVIA)(MP3_320K).mp3',
@@ -20,6 +20,7 @@ var db=["",
 
 
 var musica=db[Math.floor(Math.random()*db.length + 1)]
+
 nome=document.querySelector('.nome')//coloca o nome da musica a ser tocada
 nome.innerHTML=`<p> ${musica} </p>`;
 
@@ -76,25 +77,15 @@ function Progresso() {
     document.getElementById('random').click();
 
 }
-
-
-
-
-    // console.log(widthy);
 }
-
 
 function Anima(){  intervalo= setInterval(Progresso, 1000); }
 
+function Stop(){clearInterval(intervalo);}
 
-function Stop(){
-    clearInterval(intervalo);
-
-}
 function AutoPlay(){
     audio.play()
     Anima()
-
     document.querySelector('.player').src='./img/replay.svg'
 }
 
